@@ -1,0 +1,14 @@
+.container-busqueda{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin: 20px;
+    
+}
+.container-padron >h2{
+
+    color: rgb(249, 248, 248);
+    font-weight: bold;
+}

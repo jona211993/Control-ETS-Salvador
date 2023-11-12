@@ -1,0 +1,484 @@
+{
+    "opciones": [
+ {
+  "value": "ABARCA QUIROZ LUCIO DANIEL"
+ },
+ {
+  "value": "ABREU  ESCALONA BENJAMIN YOHANY"
+ },
+ {
+  "value": "ACOSTA BUENO JOSE DAVID"
+ },
+ {
+  "value": "ALMEYDA GODINEZ JOSE ALBERTO"
+ },
+ {
+  "value": "ALVARADO LOZANO JULIO ISRAEL"
+ },
+ {
+  "value": "ANGULO AYALA JUAN CARLOS"
+ },
+ {
+  "value": "APONTE ESPINOZA ERIKSON"
+ },
+ {
+  "value": "ARANEO GARCIA PEDRO MIGUEL"
+ },
+ {
+  "value": "ARCE OYOLA JESUS MARCELO"
+ },
+ {
+  "value": "ARELLANO CCECCAÑA NAZARIA"
+ },
+ {
+  "value": "ARIAS CALLUPE MAYER POMPEYO"
+ },
+ {
+  "value": "ARZAPALO ARIAS ARMANDO"
+ },
+ {
+  "value": "ARZAPALO ARIAS JEAN ARMANDO"
+ },
+ {
+  "value": "BAUTISTA CCOLQUEHUANCA EDILBERTO"
+ },
+ {
+  "value": "BORJA VELASQUEZ DANIEL ALCIDES"
+ },
+ {
+  "value": "BOTTGER ZORRILLA CHRISTIAN ROGER"
+ },
+ {
+  "value": "CAHUANA BAUSTINZA ISAIAS"
+ },
+ {
+  "value": "CALLA YNFANTAS CARLOS ALBERTO"
+ },
+ {
+  "value": "CAMPOS PALACIOS HILDER EDWIN"
+ },
+ {
+  "value": "CAPCHA ZUÑIGA JORGE LON"
+ },
+ {
+  "value": "CARHUAJULCA COBEÑAS HENRY ALBERTO"
+ },
+ {
+  "value": "CARHUAS ARCE EDER HUGO"
+ },
+ {
+  "value": "CARMONA PORTUGUEZ RAUL EDUARDO"
+ },
+ {
+  "value": "CARMONA PORTUGUEZ WUILFREDO SANDOR"
+ },
+ {
+  "value": "CARRILLO DOLORIET LUIS ARMANDO"
+ },
+ {
+  "value": "CASAS QUISPE WILBERT SILVES"
+ },
+ {
+  "value": "CASAVILCA GAMONAL HENRY WILIAM"
+ },
+ {
+  "value": "CASMA MOQUILLAZA JUAN CARLOS"
+ },
+ {
+  "value": "CASTAÑEDA CARHUANCHO EDWIN CHARLE"
+ },
+ {
+  "value": "CASTRO MEDINA HUGO YANCE"
+ },
+ {
+  "value": "CCAPCHA    PINO LUIS ALFREDO"
+ },
+ {
+  "value": "CEBALLOS BARRIOS LUIS FERNANDO"
+ },
+ {
+  "value": "CHACALTANA VENTURA JOSE FRANCISCO"
+ },
+ {
+  "value": "CHAVEZ ORIHUELA CARLOS ALBERTO"
+ },
+ {
+  "value": "CORANTE OCHOA CARLOS EDUARDO"
+ },
+ {
+  "value": "CORANTE OCHOA GERSON EDUARDO"
+ },
+ {
+  "value": "CORCEGA UGAS MARINO JOSE"
+ },
+ {
+  "value": "CORDOVA CORDOVA JEAN GIMBERT"
+ },
+ {
+  "value": "CRESPIN VIGO ERNESTO SANTIAGO"
+ },
+ {
+  "value": "CRISANTO  SANCHEZ FELIPE"
+ },
+ {
+  "value": "CUEVA HUERTA FILOMON"
+ },
+ {
+  "value": "DE LA CRUZ REYNOSO LUIS FERNANDO"
+ },
+ {
+  "value": "DIAZ ANZONY DOUGLAS"
+ },
+ {
+  "value": "DURAND RIOS AUGUSTO URIEL"
+ },
+ {
+  "value": "ECHAJAYA APAESTEGUI JOSE MANUEL"
+ },
+ {
+  "value": "ENCARNACION TRINIDAD JAIME"
+ },
+ {
+  "value": "ESPINOZA QUISPE AGUSTIN"
+ },
+ {
+  "value": "FARFAN GONZALES VICTOR MANUEL"
+ },
+ {
+  "value": "FERNANDEZ FRIAS WILMER"
+ },
+ {
+  "value": "FLORES CARRION DAVID"
+ },
+ {
+  "value": "FLORES CARRION JAVIER"
+ },
+ {
+  "value": "FLORES PEREZ GABRIEL"
+ },
+ {
+  "value": "GALINDO MEDRANO LUIS ENRIQUE"
+ },
+ {
+  "value": "GALINDO TELLO ALBERTO"
+ },
+ {
+  "value": "GAMARRA PEREZ GASPAR DAVID"
+ },
+ {
+  "value": "GAMBOA REPOLLEDO GREGORIO"
+ },
+ {
+  "value": "GAMBOA REPOLLEDO WALTER"
+ },
+ {
+  "value": "GONZALES GONZALES TOMAS"
+ },
+ {
+  "value": "GUERRA CHOMBA ANTHONY"
+ },
+ {
+  "value": "HERNANDEZ GANOZA TELMO YSAAC"
+ },
+ {
+  "value": "HUACHO SORIANO LUIS ALBERTO"
+ },
+ {
+  "value": "HUANCA VEGA DENIS JAVIER"
+ },
+ {
+  "value": "HUAYTAN MATO JULIO ALFREDO"
+ },
+ {
+  "value": "JAQUE YZAGUIRRE TEODOCIO MAXIMO"
+ },
+ {
+  "value": "JARA TERRONES SILVIO"
+ },
+ {
+  "value": "JESUS TAPIA JOSE ANTONIO"
+ },
+ {
+  "value": "LAVADO TORRES JUAN JESUS"
+ },
+ {
+  "value": "LOAYZA ORTIZ CARLOS  ENRRIQUE"
+ },
+ {
+  "value": "LOAYZA TELENTES RAYMUNDO ELENO"
+ },
+ {
+  "value": "LOZANO GALINDO JOSE WILDER"
+ },
+ {
+  "value": "MACCARI CASTILLO RONY RAUL"
+ },
+ {
+  "value": "MACCARI CASTILLO WARNER ABELARDO"
+ },
+ {
+  "value": "MALLQUI BALVIN HECTOR"
+ },
+ {
+  "value": "MAMANI JALIXTO DAVID"
+ },
+ {
+  "value": "MANZANO ESPINOZA JULIO"
+ },
+ {
+  "value": "MARTINEZ WILMER GABRIEL"
+ },
+ {
+  "value": "MEDINA LIMAYLLA GODOFREDO EULOGIO"
+ },
+ {
+  "value": "MEDINA ROMAN JOSE LUIS"
+ },
+ {
+  "value": "MENDOZA TORREJON PASCUAL"
+ },
+ {
+  "value": "MIRANO GOÑAS JHON ERIC"
+ },
+ {
+  "value": "MONTES ARANA JESUS JORGE"
+ },
+ {
+  "value": "MONTOYA HUAMAN GERARDO"
+ },
+ {
+  "value": "MUÑOZ ALMONACID JUAN JOSE"
+ },
+ {
+  "value": "NOA SAMBRANO RAFAEL"
+ },
+ {
+  "value": "OLAVE CHOQUECAHUANA JOEL BRAULIO"
+ },
+ {
+  "value": "OLIVERA LOPEZ WILMER ROGER"
+ },
+ {
+  "value": "ORDONIO ALVARADO NARCISO NACARIO"
+ },
+ {
+  "value": "PACHECO VERGARA KEIVER DUVAN"
+ },
+ {
+  "value": "PALOMINO CORDOVA RAFAEL FAVIO"
+ },
+ {
+  "value": "PAPUICO PONCE ALEXANDER RONALD"
+ },
+ {
+  "value": "PASACHE BARRANTES JUAN MANUEL"
+ },
+ {
+  "value": "PAUCAR CUSICAHUA ROBERTO"
+ },
+ {
+  "value": "PEREZ GIRON CARLOS ALEJANDRO"
+ },
+ {
+  "value": "PEREZ RAMIREZ JUAN CARLOS"
+ },
+ {
+  "value": "PEREZ RUIZ JOCSAN"
+ },
+ {
+  "value": "PERNALETE ALDANA JONATAN JOSE"
+ },
+ {
+  "value": "PERNIA DUQUE JOSE JAVIER"
+ },
+ {
+  "value": "PILLCO ANTONIO YHON YONATHAN"
+ },
+ {
+  "value": "PINEDA CARRILLO MANUEL JESUS"
+ },
+ {
+  "value": "POMPILLA LUZA EDGAR TIMOTEO"
+ },
+ {
+  "value": "POMPILLA LUZA JAVIER"
+ },
+ {
+  "value": "QUINTANA GONZALES HUGO NAZARIO"
+ },
+ {
+  "value": "QUINTO YARLEQUE CHRISTIAN FELIX"
+ },
+ {
+  "value": "QUISPE GUZMAN HECTOR MARCOS"
+ },
+ {
+  "value": "QUISPE LUNA ALFONSO PATROCINIO"
+ },
+ {
+  "value": "QUISQUICHE RODENAS JOSE EDWIN"
+ },
+ {
+  "value": "RAMOS ASENCIO RUBEN CAMILO"
+ },
+ {
+  "value": "RAMOS FERNANDEZ JORGE IRINEO"
+ },
+ {
+  "value": "RAMOS MAZA ROBERTO CARLOS"
+ },
+ {
+  "value": "RAMOS RODRIGUEZ JUAN CARLOS"
+ },
+ {
+  "value": "RAMOS SAWADA MARIO CARLOS"
+ },
+ {
+  "value": "RANGEL AÑEZ JOERVIS DE JESUS"
+ },
+ {
+  "value": "RENGEL DEYVIS SAMIL"
+ },
+ {
+  "value": "REQUENA ALCANTARA PEDRO DANIEL"
+ },
+ {
+  "value": "REYES CONDOR ELEAZAR PEDRO"
+ },
+ {
+  "value": "RIOS YANGUA DULANDO"
+ },
+ {
+  "value": "RIVERA CARBAJAL JORGE HUGO"
+ },
+ {
+  "value": "RODRIGUEZ CABELLO RODOLFO JOSE"
+ },
+ {
+  "value": "RODRIGUEZ GAVIDIA EDUARDO ISAAC"
+ },
+ {
+  "value": "ROJAS   LIZANA PERCY"
+ },
+ {
+  "value": "ROMERO TOMAS JONATAN ANDRES"
+ },
+ {
+  "value": "ROSALES CARBONELL CARLOS JOSE"
+ },
+ {
+  "value": "SAIRE QUISPE GERARDO"
+ },
+ {
+  "value": "SALINAS ZUÑIGA CARLOS ALFREDO"
+ },
+ {
+  "value": "SAMANIEGO HUAMAN LUCIO HECTOR"
+ },
+ {
+  "value": "SANCHEZ SANCHEZ AURELIO NATALIO"
+ },
+ {
+  "value": "SARAVIA HUASASQUICHE ELMER ESAU"
+ },
+ {
+  "value": "SERRANO OYOLA WILMER"
+ },
+ {
+  "value": "SILVA PEÑA JORGE JIMMY"
+ },
+ {
+  "value": "SOLANO HUAYTALLA FAUSTINO"
+ },
+ {
+  "value": "SORIA OSORIO PEDRO YONI"
+ },
+ {
+  "value": "SULCA AYALA AMADOR"
+ },
+ {
+  "value": "TANTAVILCA BLAS CARLOS ALBERTO"
+ },
+ {
+  "value": "TENIENTE SIGUAS CESAR CRISTHIAN"
+ },
+ {
+  "value": "TITO HUAMAN CARLOS RAFAEL"
+ },
+ {
+  "value": "TORREALBA ROMAN JUAN CARLOS"
+ },
+ {
+  "value": "TORRES  CORNEJO SAMUEL RICARDO  MIGUEL"
+ },
+ {
+  "value": "TORRES BARBOZA JUAN"
+ },
+ {
+  "value": "TUA  ZAMBRANO ENDERSON  JOSET"
+ },
+ {
+  "value": "TUA ZAMBRANO KENDY ELIANDRE"
+ },
+ {
+  "value": "VALDIVIA DE LA CRUZ JUAN FRANCISCO"
+ },
+ {
+  "value": "VALLADARES MACIZO ORLANDO   FELIX"
+ },
+ {
+  "value": "VASQUEZ TERRAZAS VICTOR ELADIO"
+ },
+ {
+  "value": "VEGA BARRETO JUAN CARLOS"
+ },
+ {
+  "value": "VELASQUEZ RODRIGUEZ NELSON ALBERTO"
+ },
+ {
+  "value": "VELIZ ACOSTA WILDER HENRY"
+ },
+ {
+  "value": "VENTURA CARDENAS CENEN RAUL"
+ },
+ {
+  "value": "VENTURA RIVERA CHRISTIAN RAUL"
+ },
+ {
+  "value": "VIDAL  ARTOLA ANDRES EDUARDO"
+ },
+ {
+  "value": "YANA HUAMANI YESENIA"
+ },
+ {
+  "value": "YANQUE CHACMANA PERCY ESTEBAN"
+ },
+ {
+  "value": "YARANGO CASAS JOSE ALBERTO"
+ },
+ {
+  "value": "YMAN POZADA MANUEL ANDRES"
+ },
+ {
+  "value": "YOVERA VILCAPUMA CARLOS ALBERTO"
+ },
+ {
+  "value": "ZACARIAS ZURICHAQUI LI JHORDY"
+ },
+ {
+  "value": "ZAMMAR  MAGALLANES ROBERTO  MARTIN"
+ },
+ {
+  "value": "ZUASNABAR AGUILAR HECTOR"
+ },
+ {
+  "value": "ZURICHAQUI MACHACA ELVIS FLORENCIO"
+ },
+ {
+  "value": "ZURITA HEREÑA LENNI JESUS"
+ },
+ {
+  "value": "ZUÑIGA URIBE VLADIMIR"
+ }
+]
+}

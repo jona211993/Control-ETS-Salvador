@@ -1,0 +1,29 @@
+.container-lista{
+    display:flex;
+    align-items: center;    
+    width: 100%;
+}
+.wraper-list{
+   
+    width: 100%;
+    margin: 1em;
+}
+.container-padron{
+    color: white;
+    display: flex;
+    gap: 10px;
+}
+.container-padron input{
+    width: 60px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    &:focus{
+        background-color: rgb(162, 255, 0);
+    }
+}
+
+.ant-pagination-prev,
+.ant-pagination-next {
+  background-color: #e9e1dd; /* Color azul */
+ color: white;}

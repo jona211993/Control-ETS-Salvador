@@ -1,0 +1,21 @@
+.container-img-buses{
+    background-image:url("../img/038.jpg") ;
+    height: 170px;
+    width: 180px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 40px; /* Coloca el div en la parte superior */
+    right: 80px; /* Coloca el div en la esquina derecha */
+    padding: 10px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:1180px) {
+    .container-img-buses{
+        display: flex;
+        position: initial;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
