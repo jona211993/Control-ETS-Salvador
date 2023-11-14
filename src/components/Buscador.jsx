@@ -44,8 +44,9 @@ export const Buscador = () => {
       if (!nombreExistente && !padronExistente) {
         const now = new Date(); // Obtener la fecha y hora actuales
         const hora = now.toLocaleTimeString();
+        const estadoDefecto='Reten'
         console.log(hora);
-        addItem({ id: items.length + 1, padron:padronValue, nombre: inputValue , hora: hora });
+        addItem({ id: items.length + 1, padron:padronValue, nombre: inputValue , hora: hora , estado: estadoDefecto });
         // Reinicia el valor del input después de añadir
         console.log("Añadido:", inputValue);
         setInputValue("");
