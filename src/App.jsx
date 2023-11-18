@@ -5,6 +5,7 @@ import { Lista } from "./components/Lista"
 import { Logo } from "./components/Logo"
 import { Title } from "./components/Title"
 import "./styles/app.css"
+import { Switch } from "./components/Switch";
 
 function App() {
   const { loadItemsFromLocalStorage } = useLista();
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="container-main">      
       <Title></Title>
+       <Switch></Switch>
        <Buscador></Buscador>  
        <Logo></Logo>   
        <Lista></Lista>

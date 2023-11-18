@@ -9,6 +9,10 @@
 }
 .container-padron >h2{
 
-    color: rgb(249, 248, 248);
+    color: var(--text-primary);
     font-weight: bold;
+}
+.container-btn{
+    display: flex;
+    gap: 15px;
 }

@@ -32,6 +32,40 @@ const useLista = create((set) => ({
       set({ items: JSON.parse(storedItems) });
     }
   },
+  clearItems: () =>
+  set(() => {
+    localStorage.removeItem("listaItems");
+    return { items: [] };
+  }),
+
+loadItemsFromLocalStorage: () => {
+  const storedItems = localStorage.getItem("listaItems");
+  if (storedItems) {
+    set({ items: JSON.parse(storedItems) });
+  }
+},
+editPadron: (id, nuevoPadron) =>
+    set((state) => {
+      // Verificar si el nuevo padron ya existe en otros registros
+      const padronExistente = state.items.some((item) => item.padron === nuevoPadron);
+      
+      if (padronExistente) {
+        // Si el nuevo padron ya existe, no realizar la edición
+        console.error("Error: El nuevo padron ya existe en otro registro.");
+        return { items: state.items };
+      }
+
+      // Realizar la edición del campo padron
+      const updatedItems = state.items.map((item) =>
+        item.id === id ? { ...item, padron: nuevoPadron } : item
+      );
+
+      // Actualizar el localStorage
+      localStorage.setItem("listaItems", JSON.stringify(updatedItems));
+
+      // Retornar el nuevo estado
+      return { items: updatedItems };
+    }),
 }));
 
 export default useLista;

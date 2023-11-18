@@ -1,12 +1,13 @@
 .container-lista{
     display:flex;
+    justify-content: center;
     align-items: center;    
     width: 100%;
 }
 .wraper-list{
-   
     width: 100%;
-    margin: 1em;
+    margin: 5px;
+    
 }
 .container-padron{
     color: white;
@@ -30,4 +31,7 @@
 
  .fila-celeste {
     background-color: #1e5df0; /* Puedes ajustar el color según tus preferencias */
+  }
+  .ant-table-tbody > tr:hover > td {
+    background-color: transparent !important;
   }

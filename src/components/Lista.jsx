@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Table, Button, Space } from "antd";
+import { Table, Button, Space , Modal,Input} from "antd";
 import {
   EditOutlined,
   DeleteOutlined,
@@ -10,7 +10,7 @@ import useLista from "../store/listaStore";
 import "../styles/lista.css";
 
 export const Lista = () => {
-  const { items, removeItem, updateItemEstado } = useLista();
+  const { items, removeItem, updateItemEstado, editPadron } = useLista();
   const [rowClasses, setRowClasses] = useState({});
   const [dataSource, setDataSource] = useState(
     items.map((item) => ({
@@ -35,15 +35,52 @@ export const Lista = () => {
       }))
     );
   }, [items]);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [editingItemId, setEditingItemId] = useState(null);
+  const [newPadron, setNewPadron] = useState("");
+
+  const handleEditar = (id) => {
+    setEditingItemId(id);
+    setModalVisible(true);
+  };
+
+  const handleModalCancel = () => {
+    setModalVisible(false);
+    setEditingItemId(null);
+    setNewPadron("");
+  };
+
+  const handleModalOk = () => {
+    if (!newPadron.trim()) {
+      console.error("Error: El nuevo padron no puede estar vacío.");
+      return;
+    }
+
+    // Validar que el nuevo padron no exista en otros registros
+    const padronExistente = dataSource.some(
+      (item) => item.padron === newPadron && item.id !== editingItemId
+    );
+
+    if (padronExistente) {
+      Modal.error({
+        title: "Error",
+        content: "El nuevo padron ya existe en otro registro.",
+      });
+      return;
+    }
+
+    // Actualizar el padron utilizando la función editPadron
+    editPadron(editingItemId, newPadron);
+
+    // Cerrar el modal y limpiar el estado
+    setModalVisible(false);
+    setEditingItemId(null);
+    setNewPadron("");
+  };
 
   useEffect(() => {
     console.log("Datos iniciales:", items);
-  }, [items]);
-
-  const handleEditar = (id) => {
-    // Lógica para editar el elemento con el ID proporcionado
-    console.log(`Editar elemento con ID ${id}`);
-  };
+  }, [items]); 
 
   const handleEliminar = (id) => {
     // Lógica para eliminar el elemento con el ID proporcionado
@@ -93,6 +130,7 @@ export const Lista = () => {
       key: "acciones",
       render: (text, record) => (
         <Space>
+          
           <Button
             icon={<EditOutlined style={{ color: "green" }} />}
             onClick={() => handleEditar(record.id)}
@@ -137,10 +175,22 @@ export const Lista = () => {
         <Table
           columns={columns}
           dataSource={dataSource}
-          pagination={{ pageSize: 20 }}
+          pagination={{ pageSize: 50 }}
           rowClassName={rowClassName}
         />
       </div>
+      <Modal
+        title="Editar Padron"
+        open={modalVisible}
+        onOk={handleModalOk}
+        onCancel={handleModalCancel}
+      >
+        <Input
+          value={newPadron}
+          onChange={(e) => setNewPadron(e.target.value)}
+          placeholder="Nuevo Padron"
+        />
+      </Modal>
     </div>
   );
 };

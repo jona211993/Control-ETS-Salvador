@@ -5,13 +5,14 @@ import "../styles/buscador.css";
 import useLista from "../store/listaStore";
 
 export const Buscador = () => {
-  const { items, addItem } = useLista();
+  const { items, addItem, clearItems } = useLista();
 
   const [myOptions, setMyOptions] = useState(data.opciones);
   const [inputValue, setInputValue] = useState("");
   const [padronValue, setPadronValue] = useState("");
   const [selectedValue, setSelectedValue] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
+  const [modalVisible2, setModalVisible2] = useState(false);
 
   const handleSearch = (value) => {
     // Filtra las opciones basándose en la entrada del usuario
@@ -33,24 +34,33 @@ export const Buscador = () => {
     console.log(padronValue);
   };
   const aniadirConductor = () => {
-    if (inputValue.trim() !== "" && padronValue!="" && padronValue<=138) {
+    if (inputValue.trim() !== "" && padronValue != "" && padronValue <= 138) {
       // Verificar si ya existe un elemento con el mismo nombre
       const nombreExistente = items.some(
         (item) => item.nombre === selectedValue
       );
-      const padronExistente = items.some(
-        (item) => item.padron === padronValue
-      );
+      const padronExistente = items.some((item) => item.padron === padronValue);
       if (!nombreExistente && !padronExistente) {
         const now = new Date(); // Obtener la fecha y hora actuales
         const hora = now.toLocaleTimeString();
-        const estadoDefecto='Reten'
+        const estadoDefecto = "Reten";
         console.log(hora);
-        addItem({ id: items.length + 1, padron:padronValue, nombre: inputValue , hora: hora , estado: estadoDefecto });
+        addItem({
+          id: items.length + 1,
+          padron: padronValue,
+          nombre: inputValue,
+          hora: hora,
+          estado: estadoDefecto,
+        });
         // Reinicia el valor del input después de añadir
         console.log("Añadido:", inputValue);
         setInputValue("");
-        setSelectedValue("");
+        setSelectedValue(""); 
+        Modal.success({
+          title: "Añadido",
+          content: "Registro Exitoso!!.",
+        });
+        
       } else {
         // Muestra el modal si el nombre ya existe
         setModalVisible(true);
@@ -62,13 +72,29 @@ export const Buscador = () => {
     setModalVisible(false);
     setInputValue(""); // Reinicia el valor del input después de añadir
   };
- 
+
+  const vaciarLista=()=>{
+    if(items.length>0)
+    setModalVisible2(true);
+  }
+  const handleConfirmarVaciarLista = () => {
+    // Lógica para vaciar la lista
+    clearItems();
+
+    // Cierra el nuevo modal de confirmación
+    setModalVisible2(false);
+  };
+
+  const handleCancelarVaciarLista = () => {
+    // Cierra el nuevo modal de confirmación
+    setModalVisible2(false);
+  };
   return (
     <div className="container-busqueda">
-        <div className="container-padron">
-            <h2>Padrón: </h2>
-            <input type="text" value={padronValue} onChange={handlePadronChange}/>
-        </div>
+      <div className="container-padron">
+        <h2>Padrón: </h2>
+        <input type="text" value={padronValue} onChange={handlePadronChange} />
+      </div>
       <div>
         <AutoComplete
           style={{
@@ -85,6 +111,9 @@ export const Buscador = () => {
         <Button type="primary" onClick={aniadirConductor}>
           Añadir
         </Button>
+        <Button type="primary" danger onClick={vaciarLista}>
+          Refrescar
+        </Button>
       </div>
       <Modal
         title="Conductor Existente"
@@ -92,7 +121,16 @@ export const Buscador = () => {
         onOk={handleModalOk}
         onCancel={handleModalOk}
       >
-        El conductor o el padron ya está en cola. Por favor, ingrese un nombre diferente.
+        El conductor o el padron ya está en cola. Por favor, ingrese un nombre
+        diferente.
+      </Modal>
+      <Modal
+        title="Confirmar"
+        open={modalVisible2}
+        onOk={handleConfirmarVaciarLista}
+        onCancel={handleCancelarVaciarLista}
+      >
+        ¿Estas seguro de eliminar todos los datos de la tabla?
       </Modal>
     </div>
   );
