@@ -128,18 +128,22 @@ export const Lista = () => {
     {
       title: "Acciones",
       key: "acciones",
+      className: "acciones-column", 
       render: (text, record) => (
         <Space>
           
           <Button
+           className="acciones-button"
             icon={<EditOutlined style={{ color: "green" }} />}
             onClick={() => handleEditar(record.id)}
           />
           <Button
+          className="acciones-button"
             icon={<DeleteOutlined style={{ color: "red" }} />}
             onClick={() => handleEliminar(record.id)}
           />
           <Button
+          className="acciones-button"
             icon={<ArrowUpOutlined style={{ color: "blue" }} />} // Reemplaza 'ChangeIcon' con el icono que desees para la acción de cambio
             onClick={() => handleChangeEstado(record.id, record.estado)}
           />
@@ -175,7 +179,7 @@ export const Lista = () => {
         <Table
           columns={columns}
           dataSource={dataSource}
-          pagination={{ pageSize: 50 }}
+          pagination={{ pageSize: 60 }}          
           rowClassName={rowClassName}
         />
       </div>

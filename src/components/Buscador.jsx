@@ -62,7 +62,11 @@ export const Buscador = () => {
         Modal.success({
           title: "Añadido",
           content: "Registro Exitoso!!.",
+          okButtonProps: { style: { display: "none" } },
         });
+        setTimeout(() => {
+          Modal.destroyAll(); // Cierra todos los modales, incluido el de éxito
+        }, 2000);
         
       } else {
         // Muestra el modal si el nombre ya existe
@@ -114,10 +118,7 @@ export const Buscador = () => {
 
   return (
     <div className="container-busqueda">
-       <div className="container-pdf">
-        <FilePdfFilled onClick={generar_pdf} style={{color: 'red', fontSize: '32px'}} />
-        <h4>PDF</h4>
-      </div>
+      
       <div className="container-padron">
         <h2>Padrón: </h2>
         <input type="text" value={padronValue} onChange={handlePadronChange} />
@@ -141,6 +142,10 @@ export const Buscador = () => {
         <Button type="primary" danger onClick={vaciarLista}>
           Refrescar
         </Button>
+        <div className="container-pdf">
+        <FilePdfFilled onClick={generar_pdf} style={{color: 'red', fontSize: '32px'}} />
+        <h4>PDF</h4>
+      </div>
       </div>
       <Modal
         title="Conductor Existente"
@@ -154,6 +159,7 @@ export const Buscador = () => {
       <Modal
         title="Confirmar"
         open={modalVisible2}
+        
         onOk={handleConfirmarVaciarLista}
         onCancel={handleCancelarVaciarLista}
       >

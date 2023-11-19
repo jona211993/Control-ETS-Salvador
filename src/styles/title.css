@@ -1,14 +1,14 @@
 .container-title{
     display: flex;
     justify-content: center;
-    margin: 20px ;
+    margin: 10px ;
 }
 
 .container-title >p{
     color:var(--text-primary);
     font-size: 56px;
     font-weight: bold;
-    margin: 1em;
+    margin: 0.5em;
     text-align: center;
     
 }

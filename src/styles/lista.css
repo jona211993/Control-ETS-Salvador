@@ -35,3 +35,15 @@
   .ant-table-tbody > tr:hover > td {
     background-color: transparent !important;
   }
+
+
+  @media (max-width: 767px) {
+    .ant-space {
+      display: block; /* Cambia la visualización a bloque */
+    }
+  
+    .acciones-button {
+      display: block; /* Muestra cada botón en un bloque separado */
+      margin-bottom: 8px; /* Agrega margen inferior para separar los botones */
+    }
+  }

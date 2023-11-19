@@ -19,9 +19,8 @@
 .container-pdf{
     height: 30px;
     width: 30px;
-    right: 2em;
-    bottom: 0;
-    position: absolute;
+    margin-left: 5px;
+    
     
     >h4{
         color: var(--text-primary);
