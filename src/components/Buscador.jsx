@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { AutoComplete, Button, Modal } from "antd";
+import {FilePdfFilled} from '@ant-design/icons';
+import {jsPDF} from 'jspdf';
+import "jspdf-autotable";
 import data from "../data/data.json";
 import "../styles/buscador.css";
 import useLista from "../store/listaStore";
@@ -72,7 +75,6 @@ export const Buscador = () => {
     setModalVisible(false);
     setInputValue(""); // Reinicia el valor del input después de añadir
   };
-
   const vaciarLista=()=>{
     if(items.length>0)
     setModalVisible2(true);
@@ -84,13 +86,38 @@ export const Buscador = () => {
     // Cierra el nuevo modal de confirmación
     setModalVisible2(false);
   };
-
   const handleCancelarVaciarLista = () => {
     // Cierra el nuevo modal de confirmación
     setModalVisible2(false);
   };
+
+  const generar_pdf =()=>{
+    const doc = new jsPDF();
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(16);
+    doc.text('COLA DE RETENES',doc.internal.pageSize.getWidth() / 2, 15, 'center');
+    const currentDate = new Date().toLocaleDateString();
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(12);
+    doc.text(`Fecha : ${currentDate}`,20,30)
+    doc.autoTable({
+      startY: 40,
+      head: [['Orden', 'Padron', 'Nombre', 'Hora de llegada']],
+      body: items.map(item => [item.id, item.padron, item.nombre, item.hora]),
+    });
+
+    // Descargar el PDF con un nombre específico
+    doc.save(`RegistroDeLlegadaRetenes_${currentDate}.pdf`);
+
+   console.log('pdf generado');
+  }
+
   return (
     <div className="container-busqueda">
+       <div className="container-pdf">
+        <FilePdfFilled onClick={generar_pdf} style={{color: 'red', fontSize: '32px'}} />
+        <h4>PDF</h4>
+      </div>
       <div className="container-padron">
         <h2>Padrón: </h2>
         <input type="text" value={padronValue} onChange={handlePadronChange} />

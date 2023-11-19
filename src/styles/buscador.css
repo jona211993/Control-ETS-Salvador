@@ -16,3 +16,16 @@
     display: flex;
     gap: 15px;
 }
+.container-pdf{
+    height: 30px;
+    width: 30px;
+    right: 2em;
+    bottom: 0;
+    position: absolute;
+    
+    >h4{
+        color: var(--text-primary);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+}
