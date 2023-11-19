@@ -140,7 +140,7 @@ export const Buscador = () => {
           Añadir
         </Button>
         <Button type="primary" danger onClick={vaciarLista}>
-          Refrescar
+          Limpiar Cola
         </Button>
         <div className="container-pdf">
         <FilePdfFilled onClick={generar_pdf} style={{color: 'red', fontSize: '32px'}} />
