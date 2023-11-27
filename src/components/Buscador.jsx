@@ -5,10 +5,12 @@ import {jsPDF} from 'jspdf';
 import "jspdf-autotable";
 import data from "../data/data.json";
 import "../styles/buscador.css";
-import useLista from "../store/listaStore";
+import {useLista, useContador } from "../store/listaStore";
+
 
 export const Buscador = () => {
   const { items, addItem, clearItems } = useLista();
+  const {inc,contador,reset} = useContador();
 
   const [myOptions, setMyOptions] = useState(data.opciones);
   const [inputValue, setInputValue] = useState("");
@@ -48,8 +50,9 @@ export const Buscador = () => {
         const hora = now.toLocaleTimeString();
         const estadoDefecto = "Reten";
         console.log(hora);
+        const newcontador= inc();
         addItem({
-          id: items.length + 1,
+          id: contador,
           padron: padronValue,
           nombre: inputValue,
           hora: hora,
@@ -82,10 +85,12 @@ export const Buscador = () => {
   const vaciarLista=()=>{
     if(items.length>0)
     setModalVisible2(true);
+    
   }
   const handleConfirmarVaciarLista = () => {
     // Lógica para vaciar la lista
     clearItems();
+    reset();
 
     // Cierra el nuevo modal de confirmación
     setModalVisible2(false);

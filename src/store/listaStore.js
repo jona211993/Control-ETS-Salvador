@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-const useLista = create((set) => ({
+export const useLista = create((set) => ({
   items: [],
   // Función para agregar un nuevo elemento y actualizar el localStorage
   addItem: (newItem) =>
@@ -67,5 +67,25 @@ editPadron: (id, nuevoPadron) =>
       return { items: updatedItems };
     }),
 }));
+
+export const useContador = create((set) => {
+  const storedContador = localStorage.getItem("contador");
+  const initialContador = storedContador ? parseInt(storedContador, 10) : 1;
+
+  return {
+    contador: initialContador,
+    inc: () =>
+      set((state) => {
+        const nuevoContador = state.contador + 1;
+        localStorage.setItem("contador", nuevoContador);
+        return { contador: nuevoContador };
+      }),
+      reset: () =>
+      set(() => {
+        localStorage.setItem("contador", 1);
+        return { contador: 1 };
+      }),
+  };
+});
 
 export default useLista;
