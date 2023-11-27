@@ -5,6 +5,7 @@ import {
   EditOutlined,
   DeleteOutlined,
   ArrowUpOutlined,
+  ArrowDownOutlined
 } from "@ant-design/icons";
 import useLista from "../store/listaStore";
 import "../styles/lista.css";
@@ -81,11 +82,6 @@ export const Lista = () => {
   useEffect(() => {
     console.log("Datos iniciales:", items);
   }, [items]); 
-
-  const handleEliminar = (id) => {
-    // Lógica para eliminar el elemento con el ID proporcionado
-    removeItem(id);
-  };
   useEffect(() => {
     const tableRows = document.querySelectorAll(".ant-table-row");
     tableRows.forEach((row) => {
@@ -142,22 +138,33 @@ export const Lista = () => {
             icon={<DeleteOutlined style={{ color: "red" }} />}
             onClick={() => handleEliminar(record.id)}
           />
+
+          {record.estado==="Promovido"?
+          <Button
+          className="acciones-button"
+            icon={<ArrowDownOutlined style={{ color: "red" }} />} // Reemplaza 'ChangeIcon' con el icono que desees para la acción de cambio
+            onClick={() => handleChangeEstado(record.id, record.estado)}
+          />
+          :
           <Button
           className="acciones-button"
             icon={<ArrowUpOutlined style={{ color: "blue" }} />} // Reemplaza 'ChangeIcon' con el icono que desees para la acción de cambio
             onClick={() => handleChangeEstado(record.id, record.estado)}
-          />
+          />} 
         </Space>
       ),
     },
   ];
-
+  const handleEliminar = (id) => {
+    // Lógica para eliminar el elemento con el ID proporcionado
+    removeItem(id);
+  };
   const rowClassName = (record) => {
     console.log("Estado de la fila:", record.estado);
     return record.estado === "Promovido" ? "fila-celeste" : null;
   };
-
   const handleChangeEstado = (id, estadoActual) => {
+
     // Lógica para cambiar el estado
     console.log(`el estado actual es: ${estadoActual}`);
     const nuevoEstado = estadoActual === "Promovido" ? "Reten" : "Promovido";
@@ -172,11 +179,15 @@ export const Lista = () => {
     // Implementa la lógica para actualizar el estado del item con el ID proporcionado
     console.log(`Cambiar estado del elemento con ID ${id} a ${nuevoEstado}`);
   };
+
+
+
   console.log("Renderizando Lista component");
   return (
     <div className="container-lista">
       <div className="wraper-list">
         <Table
+          key={JSON.stringify(dataSource)} // Use a key that changes when dataSource changes
           columns={columns}
           dataSource={dataSource}
           pagination={{ pageSize: 60 }}          
