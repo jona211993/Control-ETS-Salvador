@@ -66,7 +66,7 @@ export const Buscador = () => {
         });
         setTimeout(() => {
           Modal.destroyAll(); // Cierra todos los modales, incluido el de éxito
-        }, 2000);
+        }, 1300);
         
       } else {
         // Muestra el modal si el nombre ya existe
